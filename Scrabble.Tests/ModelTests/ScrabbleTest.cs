@@ -10,7 +10,7 @@ namespace Scrabble.Tests
   {
     public void Dispose()
     {
-
+      Letter.ClearAll();
     }
     [TestMethod]
     public void GetWord_ReturnsWord_Word()
@@ -22,9 +22,9 @@ namespace Scrabble.Tests
     [TestMethod]
     public void WordToList_ReturnsWordInAList_WordInAList()
     {
-      Letter testWord1 = new Letter("a");
-      Letter testWord2 = new Letter("b");
-      Letter testWord3 = new Letter("c");
+      Letter testWord1 = new Letter("A");
+      Letter testWord2 = new Letter("B");
+      Letter testWord3 = new Letter("C");
       List<Letter> testList1 = new List<Letter> {testWord1, testWord2, testWord3};
       Letter newWord = new Letter("abc");
       Letter.WordToList(newWord);
@@ -38,6 +38,14 @@ namespace Scrabble.Tests
     public void WordToList_ComparesWordToADictionary_True()
     {
       Letter newWord1 = new Letter("ZAQ");
+      Letter.WordToList(newWord1);
+      int score = Letter.WordScore();
+      Assert.AreEqual(21, score);
+    }
+    [TestMethod]
+    public void WordScore_ComparesAnyCaseWordToADictionary_True()
+    {
+      Letter newWord1 = new Letter("azq");
       Letter.WordToList(newWord1);
       int score = Letter.WordScore();
       Assert.AreEqual(21, score);

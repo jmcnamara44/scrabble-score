@@ -12,10 +12,9 @@ _This project will use C# to test different specs of the webpage._
 
 _When the user enters their word they receive the word written back to them._
 _When the user enters their word they receive the word written back to them split into an array._
-_When the user enters their word it is compared sto a dictionary._
-_When the user enters a letter they receive a score for that letter._
-_When the user enters their word they receive scores for each letter._
+_When the user enters their word it is compared to a dictionary._
 _When the user enters their word the sum of scores for each letter are added up._
+_The user can enter their word either as capital or lowercase letters and they will still receive a score._
 
 ## Setup/Installation Requirements
 

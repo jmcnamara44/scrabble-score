@@ -22,19 +22,22 @@ namespace Scrabble.Models
         {
           return _word;
         }
-
+//zaq
         public static void WordToList(Letter word)
         {
+          // word.GetWord().Split("");
           char[] wordArray = word.GetWord().ToCharArray();
+          // char[] upperWordArray = Char.ToUpper(wordArray);
           for (int x = 0; x<wordArray.Length; x++)
           {
-            Letter testStringx = new Letter(String.Join("", wordArray[x]));
+            Letter testStringx = new Letter(String.Join("", wordArray[x]).ToUpper());
             testStringx.Save();
           }
         }
 
         public static int WordScore()
         {
+          _wordScore = 0;
           for(var i = 0; i<_letters.Count; i++)
           {
             if (scores.ContainsKey(_letters[i].GetWord()))
@@ -53,6 +56,10 @@ namespace Scrabble.Models
         public static List<Letter> GetAll()
         {
           return _letters;
+        }
+        public static void ClearAll()
+        {
+          _letters.Clear();
         }
     }
 }
