@@ -15,7 +15,9 @@ namespace Scrabble.Tests
     [TestMethod]
     public void ReturnWord_ReturnsWord_Word()
     {
-    
+      string testWord1 = "abc";
+      Letter newWord = new Letter(testWord1);
+      Assert.AreEqual(testWord1, newWord.GetWord());
     }
   }
 }
