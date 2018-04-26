@@ -34,5 +34,15 @@ namespace Scrabble.Tests
       Assert.AreEqual(testList1[2].GetWord(), testList2[2].GetWord());
       Assert.AreEqual(testList1.Count, testList2.Count);
     }
+    [TestMethod]
+    public void WordToList_ComparesWordToADictionary_True()
+    {
+      Letter newWord1 = new Letter("AAA");
+      Letter.WordToList(newWord1);
+      // List<Letter> testList1 = Letter.GetAll();
+      Letter.WordScore();
+      int score = Letter.GetScore();
+      Assert.AreEqual(3, score);
+    }
   }
 }
