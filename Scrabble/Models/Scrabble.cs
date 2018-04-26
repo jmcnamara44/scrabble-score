@@ -32,12 +32,8 @@ namespace Scrabble.Models
             testStringx.Save();
           }
         }
-        public static int GetScore()
-        {
-          return _wordScore;
-        }
 
-        public static void WordScore()
+        public static int WordScore()
         {
           for(var i = 0; i<_letters.Count; i++)
           {
@@ -47,6 +43,7 @@ namespace Scrabble.Models
             }
 
           }
+          return _wordScore;
         }
         public void Save()
         {

@@ -37,12 +37,10 @@ namespace Scrabble.Tests
     [TestMethod]
     public void WordToList_ComparesWordToADictionary_True()
     {
-      Letter newWord1 = new Letter("AAA");
+      Letter newWord1 = new Letter("ZAQ");
       Letter.WordToList(newWord1);
-      // List<Letter> testList1 = Letter.GetAll();
-      Letter.WordScore();
-      int score = Letter.GetScore();
-      Assert.AreEqual(3, score);
+      int score = Letter.WordScore();
+      Assert.AreEqual(21, score);
     }
   }
 }
