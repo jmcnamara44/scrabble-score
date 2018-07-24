@@ -35,10 +35,6 @@ _Contact Jimmy with any questions or comments_
 ## Technologies Used
 
 _HTML_
-_CSS_
-_Bootstrap_
-_JavaScript_
-_jQuery_
 _CSharp_
 
 ### License
